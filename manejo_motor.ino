@@ -1,3 +1,4 @@
+#include "parametros.h"
 const int led_A_Pin =  2;
 const int led_R_Pin = 32;
 const int led_V_Pin = 33;
@@ -84,6 +85,7 @@ void loop() {
   
   
   Serial.println(velocidad);
+  Serial.println(numerito);
   
   if (velocidad <= v_max && velocidad >= v_min){
   ledcWrite(PWMChannel, velocidad);
